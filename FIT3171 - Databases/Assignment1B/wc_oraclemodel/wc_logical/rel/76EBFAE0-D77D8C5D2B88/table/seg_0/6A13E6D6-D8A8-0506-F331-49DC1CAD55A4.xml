@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6A13E6D6-D8A8-0506-F331-49DC1CAD55A4" name="OPERATOR">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>D7405B71-748C-2438-B9B3-201CCEAF11C0</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="op_id" id="1D74D0D9-108A-A8AE-357B-B097E921BC84">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>084087BC-DE30-3CA0-7E10-543FAE368615</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>5 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="op_com_name" id="CBDD3482-607F-719B-EF58-371612A068F8">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>4C6B2681-07D5-57B7-C115-BC0E8F1ED5F3</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60 CHAR</dataTypeSize>
+<ownDataTypeParameters>60 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="op_ceo_name" id="F96D7D07-62E1-28FA-AA92-2D8CED2F2DD5">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>5E7B98E1-7B4F-BFD3-B6F8-5CC10963E3BD</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="94A9F96D-B892-40D7-55B3-FCE8340DC700" name="OPERATOR_PK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>FC1BAC35-3A7F-9C3E-7369-35BC01034266</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D74D0D9-108A-A8AE-357B-B097E921BC84"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

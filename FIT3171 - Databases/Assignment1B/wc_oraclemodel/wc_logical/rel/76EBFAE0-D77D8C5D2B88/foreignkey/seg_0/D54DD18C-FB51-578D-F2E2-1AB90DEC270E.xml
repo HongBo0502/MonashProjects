@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D54DD18C-FB51-578D-F2E2-1AB90DEC270E" containerWithKeyObject="375C2EC3-D0DD-5465-B544-14D42C78D4A8" localFKIndex="1C621B3E-182D-16E0-397D-7FEE4B7C0FC6" name="TOUR_AVAILABILITY_RANGE_AVAILABILITY_RANGE_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>4ED5AF17-7066-DC66-28C6-DCACDE48D26B</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<referredTableLongName>AVAILABILITY_RANGE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>AC73E07C-A53A-3078-BFE2-3D2C87641777</referredTableID>
+<keyObject>8A02DF36-1684-14F0-C7B6-14CBDA6B3A70</keyObject>
+<referredKeyID>8A02DF36-1684-14F0-C7B6-14CBDA6B3A70</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>avail_range_desciptor</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

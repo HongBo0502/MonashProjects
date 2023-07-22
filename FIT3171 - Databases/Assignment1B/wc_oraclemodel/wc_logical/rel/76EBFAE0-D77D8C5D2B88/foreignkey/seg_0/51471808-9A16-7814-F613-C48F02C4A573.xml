@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="51471808-9A16-7814-F613-C48F02C4A573" containerWithKeyObject="7424905A-3C94-2182-0F5A-1B1A711B3855" localFKIndex="B0EB1E12-051E-8A2A-9C01-6CC51BDF356A" name="PORT_TEMPERATURE_PORT_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>79BEAA4F-142A-20F9-AFA6-4F05E2442384</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<referredTableLongName>PORT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8FBAC1FA-9319-4E37-B0BC-00BC16830801</referredTableID>
+<keyObject>52FCFCB7-9732-1F55-B1BA-F612F33939FE</keyObject>
+<referredKeyID>52FCFCB7-9732-1F55-B1BA-F612F33939FE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>port_code</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

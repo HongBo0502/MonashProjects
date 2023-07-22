@@ -1,0 +1,185 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="06F2B254-802C-1C23-2C6D-3C402CB58D24" name="PASSENGER">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>C12BF41F-91C3-74FD-268C-C073B215B03B</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pass_id" id="7C570619-720A-AA3B-1916-F2C8D4547713">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>7BF0789A-C39C-24AB-F9C5-767BDF291E12</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pass_fname" id="EBA4504C-05E5-21BA-A540-94432B367ED6">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>AF16769B-FCD9-00B4-204B-ABF30E95DEC9</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pass_lname" id="283C108B-5B6E-F8DD-B85D-1289C287BDFB">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>634C0968-E925-B075-29A4-38110D074C96</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pass_gender" id="8A4B0522-E811-CFDE-3173-CCDBCE767AD9">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>49B90789-0CC4-6517-C8CA-294342D07BB8</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="F" description="Female"/>
+<valueDef value="M" description="Male"/>
+<valueDef value="O" description="Other"/>
+</listOfValues>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pass_dob" id="1DAD7CF1-F454-DC41-AA35-ADDC23244FAC">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>C7D5F928-165A-FA28-128B-3658B921839A</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="pass_phonenum" id="131D6E08-3C88-B1CB-B071-8D469A869FA5">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>8F31C579-CFCD-8DD4-4C8C-813C146B230B</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="add_id" id="B04996BB-987C-3D83-3F03-204A64FA4400">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>DDFB12DF-4967-DE9E-99AF-5F390639ED38</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="220AE6B8-0D74-3328-F6C4-E0FBD590F4B8" referredColumn="5475AADF-F09A-12E1-7D8F-C2630B3AB032"/>
+</associations>
+</Column>
+<Column name="lang_code" id="77138518-833C-1D9E-A7C8-D71D67A5DD67">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>5E352841-828D-0D83-D27E-3668FB7319B0</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="85325053-A4B0-A1CA-9F4E-9EBF92A7B3FD" referredColumn="9A6D8F2A-3D98-1C0D-03ED-BFA04CE4032C"/>
+</associations>
+</Column>
+<Column name="pass_guardian_id" id="59F2E4EF-61E4-50E1-FED0-FC992E7C604B">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:46:50 UTC</createdTime>
+<generatorID>F66C94E5-F2D2-7751-D4C2-3F616D80540B</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="36CB0346-1812-1B5E-EECA-410E79F4693D" referredColumn="7C570619-720A-AA3B-1916-F2C8D4547713"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6CDF91F2-08E9-D09D-306E-876322DAA5BF" name="PASSENGER_PK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>5B6E7069-BCD7-6DE8-AE01-19C9420EDC12</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C570619-720A-AA3B-1916-F2C8D4547713"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="36C9338C-49DF-976B-23CF-BDC4A6B23F9D" name="PASSENGER_ADDRESS_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>850AF519-8F98-8B7E-CB72-CE1D4B233D65</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B04996BB-987C-3D83-3F03-204A64FA4400"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4584A48F-F80B-FFC8-1622-84410F3EE82B" name="PASSENGER_LANGUAGE_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>19201F46-99DB-599A-BC55-46954BAFC017</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77138518-833C-1D9E-A7C8-D71D67A5DD67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14841EB5-CB2A-E136-94F4-779C850AB031" name="PASSENGER_PASSENGER_FKv2">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:46:50 UTC</createdTime>
+<generatorID>D41785E5-C24C-7253-DE74-FD981A59947B</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59F2E4EF-61E4-50E1-FED0-FC992E7C604B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A6685D5B-DCDA-9F2F-2A1F-B9C2EC93BC1B" name="PORT_TEMPERATURE">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 05:16:19 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="porttemp_month" id="B496FB18-C3B8-B5AF-8EB3-D5D3B4B6D68C">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 05:17:07 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="Apr" description="April"/>
+<valueDef value="Aug" description="August"/>
+<valueDef value="Dec" description="December"/>
+<valueDef value="Feb" description="February"/>
+<valueDef value="Jan" description="January"/>
+<valueDef value="July" description="July"/>
+<valueDef value="Jun" description="June"/>
+<valueDef value="Mar" description="March"/>
+<valueDef value="May" description="May"/>
+<valueDef value="Nov" description="November"/>
+<valueDef value="Oct" description="October"/>
+<valueDef value="Sep" description="September"/>
+</listOfValues>
+<ownDataTypeParameters>4 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="porttemp_avghigh" id="5BDF9C87-3C7F-22B2-372F-E3F1CB8D479A">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 05:18:58 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="porttemp_avglow" id="1EF8087B-225C-4626-F75B-401CE1FCFEAB">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 05:19:08 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="port_code" id="4B75EE73-24A9-6AB7-4DAB-E8B5F3BF3A6D">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 09:53:22 UTC</createdTime>
+<commentInRDBMS><![CDATA[Port code]]></commentInRDBMS>
+<generatorID>79BEAA4F-142A-20F9-AFA6-4F05E2442384</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<referedAttribute>CF1B68DD-779E-3EEE-6532-2C554C0B979A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="78214B72-66A7-DE72-77D9-285BA6B9953E" name="PORT_TEMPERATURE PK">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 05:18:57 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B496FB18-C3B8-B5AF-8EB3-D5D3B4B6D68C</attributeRef>
+<attributeRef>4B75EE73-24A9-6AB7-4DAB-E8B5F3BF3A6D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

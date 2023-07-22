@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B774108-CEA2-2801-CF42-EBA43968967E" name="PASSENGER_CRUISE">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 07:15:24 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="pass_cruise_boarding_date_time" id="D32F425F-C0E2-AE16-BA99-F03D9A035014">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 07:15:50 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cabin_number" id="A372EAC0-7D1D-FD77-1559-8B61A90EFAC7">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:15:39 UTC</createdTime>
+<generatorID>87D69F1E-43A3-8FE5-0A5A-E7C6444CF44C</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<referedAttribute>F77B9D32-50CA-FAD9-F940-F0750A853333</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pass_id" id="0286950B-1638-13A1-140C-AE6F880DAD2B">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:16:50 UTC</createdTime>
+<generatorID>11C67393-82DE-8E5E-DEAC-C4FBBA2A6E20</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<referedAttribute>7BF0789A-C39C-24AB-F9C5-767BDF291E12</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cruise_id" id="1BD2A903-CADD-2BC9-05FA-09FFF3A84A4B">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 11:05:34 UTC</createdTime>
+<generatorID>85AAD66C-28EE-5979-3902-E1A10F952DF3</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<referedAttribute>6C99B2FD-A3F9-1BB1-77F0-C5D821EF0DA3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ship_code" id="BC883AE3-2DB3-2426-BE3F-7F104EB37DED">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 11:10:17 UTC</createdTime>
+<generatorID>87D69F1E-43A3-8FE5-0A5A-E7C6444CF44C</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<referedAttribute>68C50204-8062-99D7-3DD3-AB9A3EC4A2BD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3580298C-FBDA-8DBA-1770-BA25B35E3704" name="PASSENGER_CRUISE PK">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:17:18 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0286950B-1638-13A1-140C-AE6F880DAD2B</attributeRef>
+<attributeRef>1BD2A903-CADD-2BC9-05FA-09FFF3A84A4B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

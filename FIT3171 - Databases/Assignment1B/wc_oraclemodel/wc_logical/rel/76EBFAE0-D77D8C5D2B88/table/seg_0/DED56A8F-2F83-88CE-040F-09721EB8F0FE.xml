@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DED56A8F-2F83-88CE-040F-09721EB8F0FE" name="PASSENGER_CRUISE">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>2B774108-CEA2-2801-CF42-EBA43968967E</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="pass_cruise_boarding_date_time" id="63DFB968-9D75-5A6D-94E2-9ECD003C3F66">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>D32F425F-C0E2-AE16-BA99-F03D9A035014</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cabin_number" id="2CC5277F-B447-D9AC-12CF-FC1D983D11FE">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>A372EAC0-7D1D-FD77-1559-8B61A90EFAC7</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6EE08CEF-E858-157F-A1EE-BA9E939508A1" referredColumn="B72A1C9C-430E-8176-988E-AB35D69D92E2"/>
+</associations>
+</Column>
+<Column name="pass_id" id="7D3802C8-5146-4A7B-3927-3CA7AE4DA4FA">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>0286950B-1638-13A1-140C-AE6F880DAD2B</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="721417D8-D98F-C200-4AAA-620881D00293" referredColumn="7C570619-720A-AA3B-1916-F2C8D4547713"/>
+</associations>
+</Column>
+<Column name="cruise_id" id="82BAD3AE-DC8F-F279-680A-C6B99F5DB274">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>1BD2A903-CADD-2BC9-05FA-09FFF3A84A4B</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B31137A8-1550-EEBB-AA80-A961596E66B3" referredColumn="99ABBEFB-D720-6E76-493E-4F31DAD55516"/>
+</associations>
+</Column>
+<Column name="ship_code" id="E40DDE8A-D2D8-79DE-2491-47BB8064E392">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>BC883AE3-2DB3-2426-BE3F-7F104EB37DED</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6EE08CEF-E858-157F-A1EE-BA9E939508A1" referredColumn="9180D4EA-B079-92F9-6714-A036397C7D08"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="FA3058AF-2D6A-3EE1-E125-41E7CCA2E2F2" name="PASSENGER_CRUISE_PK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>3580298C-FBDA-8DBA-1770-BA25B35E3704</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7D3802C8-5146-4A7B-3927-3CA7AE4DA4FA"/>
+<colUsage columnID="82BAD3AE-DC8F-F279-680A-C6B99F5DB274"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C7C094CF-AD9F-BF72-310C-4EA3E721C6E3" name="PASSENGER_CRUISE_CABIN_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>87D69F1E-43A3-8FE5-0A5A-E7C6444CF44C</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2CC5277F-B447-D9AC-12CF-FC1D983D11FE"/>
+<colUsage columnID="E40DDE8A-D2D8-79DE-2491-47BB8064E392"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9DE4147C-CF60-6C00-A128-59AFD25914A4" name="PASSENGER_CRUISE_CRUISE_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>85AAD66C-28EE-5979-3902-E1A10F952DF3</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82BAD3AE-DC8F-F279-680A-C6B99F5DB274"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A17F3FDF-5555-5115-1B72-F3DB5E3A90ED" name="PASSENGER_CRUISE_PASSENGER_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>11C67393-82DE-8E5E-DEAC-C4FBBA2A6E20</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7D3802C8-5146-4A7B-3927-3CA7AE4DA4FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

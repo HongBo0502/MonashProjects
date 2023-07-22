@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="cabin_passengercruise" directorySegmentName="seg_0" id="87D69F1E-43A3-8FE5-0A5A-E7C6444CF44C">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:15:39 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<sourcePk>11A54B38-271F-8466-17E8-0A4D74C26288</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>booked for</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3848078A-BCBA-F79C-CFCD-1264E61FACCE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2B774108-CEA2-2801-CF42-EBA43968967E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

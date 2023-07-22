@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="tour_tourinstance" directorySegmentName="seg_0" id="F026C6C9-4A8A-2ED0-1523-7BA0BBA71148">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:40:01 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<sourcePk>8E21F187-C9D3-DFC3-6C84-764A963FF5DC</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>have</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0D97877A-75EC-FBE1-04AC-4B52F3EA796A</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AD63CD72-BADB-942A-F387-3C5A7B1FB3AD</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

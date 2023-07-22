@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F858EB0B-3058-1C80-11D8-198D55201581" name="TOUR_INSTANCE">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>AD63CD72-BADB-942A-F387-3C5A7B1FB3AD</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tour_date" id="181111A5-4C43-6612-0E08-CBAA67D00C46">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>BDF9F29A-19B1-5152-9E4D-F461026F174B</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tour_num" id="3087DB49-B9F1-54FA-F33C-982D22CD70F5">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tour number]]></commentInRDBMS>
+<generatorID>E4C835BE-DD3B-A347-1544-4134F611B15C</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AB54C483-9E6E-E925-6885-1F761E0CEEC3" referredColumn="88E319C8-EAB5-7095-6217-56AF22497506"/>
+</associations>
+</Column>
+<Column name="port_code" id="B58994F9-A266-B708-B35D-3242F1149667">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[Port code]]></commentInRDBMS>
+<generatorID>92F7D7D7-B8D8-AC77-C9EA-E61A28EED959</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AB54C483-9E6E-E925-6885-1F761E0CEEC3" referredColumn="26BDB079-19DE-2CC2-D7E3-1C2A432A4FF7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BAB3E9E1-4CDF-4177-D04C-F9B904E83E46" name="TOUR_INSTANCE_PK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>E1CDFDEE-B048-1638-FB6D-7F3A6AD0B5F2</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="181111A5-4C43-6612-0E08-CBAA67D00C46"/>
+<colUsage columnID="3087DB49-B9F1-54FA-F33C-982D22CD70F5"/>
+<colUsage columnID="B58994F9-A266-B708-B35D-3242F1149667"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0C9E058C-8EC1-397C-EB3B-9BB605D3B07E" name="TOUR_INSTANCE_TOUR_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>F026C6C9-4A8A-2ED0-1523-7BA0BBA71148</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3087DB49-B9F1-54FA-F33C-982D22CD70F5"/>
+<colUsage columnID="B58994F9-A266-B708-B35D-3242F1149667"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

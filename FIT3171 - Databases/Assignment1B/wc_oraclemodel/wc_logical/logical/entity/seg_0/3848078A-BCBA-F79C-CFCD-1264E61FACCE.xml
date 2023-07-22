@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3848078A-BCBA-F79C-CFCD-1264E61FACCE" name="CABIN">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 05:48:41 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cabin_number" id="F77B9D32-50CA-FAD9-F940-F0750A853333">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 05:48:56 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cabin_capacity" id="913F2C40-86A3-79B7-193A-9C603F4F488C">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 05:49:10 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cabin_class" id="73E79F85-E1FC-C2DE-E311-8D5B79E50100">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 05:49:24 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="Balcony" description="Balcony Cabin"/>
+<valueDef value="Interior" description="Interior Cabin"/>
+<valueDef value="Ocean View" description="Ocean View Cabin"/>
+<valueDef value="Suite" description="Suite Cabin"/>
+</listOfValues>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ship_code" id="68C50204-8062-99D7-3DD3-AB9A3EC4A2BD">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 11:10:00 UTC</createdTime>
+<generatorID>8B763E8F-3B1F-AD06-82C8-4039A7ED39A7</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<referedAttribute>DF8EDA15-A0A2-15C2-09A3-1297C6F541C7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="11A54B38-271F-8466-17E8-0A4D74C26288" name="CABIN PK">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 05:49:09 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F77B9D32-50CA-FAD9-F940-F0750A853333</attributeRef>
+<attributeRef>68C50204-8062-99D7-3DD3-AB9A3EC4A2BD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

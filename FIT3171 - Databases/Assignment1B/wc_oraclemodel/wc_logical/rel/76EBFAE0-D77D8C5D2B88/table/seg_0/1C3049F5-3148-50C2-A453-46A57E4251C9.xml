@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1C3049F5-3148-50C2-A453-46A57E4251C9" name="TOUR_LANGUAGE">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>561C97E4-AE2E-C877-C3E7-FC12EFE830B9</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="lang_code" id="7FA8B53B-D5D5-640A-41F7-006429F65467">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>1419DEB0-36BF-5903-5298-1436FBB65EE0</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F50D4346-F616-2E5F-6BEB-5F69864F3418" referredColumn="9A6D8F2A-3D98-1C0D-03ED-BFA04CE4032C"/>
+</associations>
+</Column>
+<Column name="tour_num" id="A64AB8D8-D018-B0E6-B61E-475D93FC3848">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tour number]]></commentInRDBMS>
+<generatorID>C2F150BD-5D1C-A5D5-EAE1-95CEAFBEB3AC</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5A23AD05-8E3C-D4B2-1417-E810A714A3CB" referredColumn="88E319C8-EAB5-7095-6217-56AF22497506"/>
+</associations>
+</Column>
+<Column name="port_code" id="CFE2322D-CEF5-3FA6-B51E-A89EDB27318B">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[Port code]]></commentInRDBMS>
+<generatorID>2212FCDE-E341-F56E-312C-F3AD4AEBF120</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5A23AD05-8E3C-D4B2-1417-E810A714A3CB" referredColumn="26BDB079-19DE-2CC2-D7E3-1C2A432A4FF7"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="38876E2F-4CE2-FA5B-DEE5-C6EFF6443AA8" name="TOUR_LANGUAGE_PK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>D80D6996-EEA7-7FB7-972D-A30C259C06D5</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A64AB8D8-D018-B0E6-B61E-475D93FC3848"/>
+<colUsage columnID="CFE2322D-CEF5-3FA6-B51E-A89EDB27318B"/>
+<colUsage columnID="7FA8B53B-D5D5-640A-41F7-006429F65467"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D8B34C67-5C19-4B1F-D3B7-BBFFE5023195" name="TOUR_LANGUAGE_LANGUAGE_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>D1406573-158A-51C3-0B3A-0B2D43046770</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7FA8B53B-D5D5-640A-41F7-006429F65467"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D510B2F0-BACA-C776-59CA-7E30F36B6F84" name="TOUR_LANGUAGE_TOUR_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>A7D78B51-A1B9-3F86-7796-EF9AD7B03B73</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A64AB8D8-D018-B0E6-B61E-475D93FC3848"/>
+<colUsage columnID="CFE2322D-CEF5-3FA6-B51E-A89EDB27318B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

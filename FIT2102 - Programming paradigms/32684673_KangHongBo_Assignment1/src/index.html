@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <style>
+      .cars{
+        fill:royalblue
+      }
+      .highlight {
+      background-color:pink;
+      }
+      .croc{
+        fill:darkgreen
+      }
+      .log{
+        fill:fuchsia
+      }
+      .goal{
+        fill:wheat
+      }
+      .gameover {
+      font-family:sans-serif;
+      font-size:80px;
+      fill:red;
+    }
+      .score{
+      font-family:sans-serif;
+      font-size:30px;
+      fill:white;
+      }
+      .HighScore{
+      font-family:sans-serif;
+      font-size:30px;
+      fill:white;
+      }
+      .frog{
+        fill:lightgreen
+      }
+      </style>
+    <title>FIT2102 A1 2022</title>
+  </head>
+  <body>
+    <h1>Frogger</h1>
+    <svg id="svgCanvas" width="600" height="600">
+      <text id='score' x="30" y="30" class="score">Score: 0</text>
+      <text id='HighScore' x="330" y="30" class="highscore">HighScore: 0</text> 
+      <g id=backgroundLayer>
+      
+      </g>
+    
+      <g id =foregroundLayer>
+
+      </g>
+      <g id =textLayer>
+      
+        </g>
+    </svg>
+    <div id="controls">
+      <h2>Controls:</h2>
+      <table>
+          <!-- <tr><td>Thrust</td><td>Up Arrow</td></tr> -->
+          <tr><td>Forward</td><td><div id="KeyW" class="key">w</div></td></tr>
+          <tr><td>Backward</td><td><div id="KeyS" class="key">s</div></td></tr>
+          <tr><td>Right</td><td><div id="KeyD" class="key">d</div></td></tr>
+          <tr><td>Left</td><td><div id="KeyA" class="key">a </div></td></tr>
+          <tr><td>Restart</td><td><div id="KeyR" class="key">r </div></td></tr>
+          <!-- <tr><td>Fire</td><td>Space</td>
+          <tr><td>Restart Game</td><td>F5</td></tr> -->
+      </table>
+      </div>
+  </body>
+</html>

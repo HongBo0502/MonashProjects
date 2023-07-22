@@ -1,0 +1,757 @@
+SQL> 
+SQL> /*
+SQL>Assignment 1B Group 41
+SQL>Authors: Kang Hong Bo, Jeremy Yoon Zhe Min, Wang Qian
+SQL>*/
+SQL> 
+SQL> DROP TABLE availability_range CASCADE CONSTRAINTS;
+
+Table AVAILABILITY_RANGE dropped.
+
+SQL> 
+SQL> DROP TABLE cabin CASCADE CONSTRAINTS;
+
+Table CABIN dropped.
+
+SQL> 
+SQL> DROP TABLE country CASCADE CONSTRAINTS;
+
+Table COUNTRY dropped.
+
+SQL> 
+SQL> DROP TABLE cruise CASCADE CONSTRAINTS;
+
+Table CRUISE dropped.
+
+SQL> 
+SQL> DROP TABLE cruise_port CASCADE CONSTRAINTS;
+
+Table CRUISE_PORT dropped.
+
+SQL> 
+SQL> DROP TABLE language CASCADE CONSTRAINTS;
+
+Table LANGUAGE dropped.
+
+SQL> 
+SQL> DROP TABLE operator CASCADE CONSTRAINTS;
+
+Table OPERATOR dropped.
+
+SQL> 
+SQL> DROP TABLE passenger CASCADE CONSTRAINTS;
+
+Table PASSENGER dropped.
+
+SQL> 
+SQL> DROP TABLE passenger_cruise CASCADE CONSTRAINTS;
+
+Table PASSENGER_CRUISE dropped.
+
+SQL> 
+SQL> DROP TABLE port CASCADE CONSTRAINTS;
+
+Table PORT dropped.
+
+SQL> 
+SQL> DROP TABLE port_temperature CASCADE CONSTRAINTS;
+
+Table PORT_TEMPERATURE dropped.
+
+SQL> 
+SQL> DROP TABLE ship CASCADE CONSTRAINTS;
+
+Table SHIP dropped.
+
+SQL> 
+SQL> DROP TABLE tour CASCADE CONSTRAINTS;
+
+Table TOUR dropped.
+
+SQL> 
+SQL> DROP TABLE tour_availability_range CASCADE CONSTRAINTS;
+
+Table TOUR_AVAILABILITY_RANGE dropped.
+
+SQL> 
+SQL> DROP TABLE tour_instance CASCADE CONSTRAINTS;
+
+Table TOUR_INSTANCE dropped.
+
+SQL> 
+SQL> DROP TABLE tour_instance_passenger CASCADE CONSTRAINTS;
+
+Table TOUR_INSTANCE_PASSENGER dropped.
+
+SQL> 
+SQL> DROP TABLE tour_language CASCADE CONSTRAINTS;
+
+Table TOUR_LANGUAGE dropped.
+
+SQL> 
+SQL> -- predefined type, no DDL - MDSYS.SDO_GEOMETRY
+SQL> 
+SQL> -- predefined type, no DDL - XMLTYPE
+SQL> 
+SQL> CREATE TABLE address (
+  2      add_id       NUMBER(5) NOT NULL,
+  3      add_street   VARCHAR2(35 CHAR) NOT NULL,
+  4      add_town     VARCHAR2(35 CHAR) NOT NULL,
+  5      add_postcode NUMBER(5) NOT NULL,
+  6      add_country  VARCHAR2(60 CHAR) NOT NULL
+  7  );
+
+Error starting at line : 52 in command -
+CREATE TABLE address (
+    add_id       NUMBER(5) NOT NULL,
+    add_street   VARCHAR2(35 CHAR) NOT NULL,
+    add_town     VARCHAR2(35 CHAR) NOT NULL,
+    add_postcode NUMBER(5) NOT NULL,
+    add_country  VARCHAR2(60 CHAR) NOT NULL
+)
+Error report -
+ORA-00955: name is already used by an existing object
+00955. 00000 -  "name is already used by an existing object"
+*Cause:    
+*Action:
+SQL> 
+SQL> ALTER TABLE address ADD CONSTRAINT address_pk PRIMARY KEY ( add_id );
+
+Error starting at line : 60 in command -
+ALTER TABLE address ADD CONSTRAINT address_pk PRIMARY KEY ( add_id )
+Error report -
+ORA-02260: table can have only one primary key
+02260. 00000 -  "table can have only one primary key"
+*Cause:    Self-evident.
+*Action:   Remove the extra primary key.
+SQL> 
+SQL> 
+SQL> /*  ERROR: UK name length exceeds maximum allowed length(30) */
+SQL> ALTER TABLE address
+  2      ADD CONSTRAINT address_add_street_add_town_add_country_add_postcode_un UNIQUE ( add_street,
+  3                                                                                    add_town,
+  4                                                                                    add_country,
+  5                                                                                    add_postcode );
+
+Error starting at line : 64 in command -
+ALTER TABLE address
+    ADD CONSTRAINT address_add_street_add_town_add_country_add_postcode_un UNIQUE ( add_street,
+                                                                                  add_town,
+                                                                                  add_country,
+                                                                                  add_postcode )
+Error report -
+ORA-02261: such unique or primary key already exists in the table
+02261. 00000 -  "such unique or primary key already exists in the table"
+*Cause:    Self-evident.
+*Action:   Remove the extra key.
+SQL> 
+SQL> CREATE TABLE availability_range (
+  2      avail_range_desciptor VARCHAR2(10 CHAR) NOT NULL
+  3  );
+
+Table AVAILABILITY_RANGE created.
+
+SQL> 
+SQL> ALTER TABLE availability_range
+  2      ADD CONSTRAINT chk_tourrange CHECK ( avail_range_desciptor IN ( 'Daily', 'Fridays',
+  3      'Mondays', 'Saturdays', 'Sundays',
+  4                                                                      'Thursdays', 'Tuesdays',
+  5                                                                      'Wednesdays', 'Weekdays',
+  6                                                                      'Weekends' ) );
+
+Table AVAILABILITY_RANGE altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN availability_range.avail_range_desciptor IS
+  2      'Range of availability in tour';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE availability_range ADD CONSTRAINT availability_range_pk PRIMARY KEY ( avail_range_desciptor );
+
+Table AVAILABILITY_RANGE altered.
+
+SQL> 
+SQL> CREATE TABLE cabin (
+  2      cabin_number   NUMBER(3) NOT NULL,
+  3      cabin_capacity NUMBER(2) NOT NULL,
+  4      cabin_class    VARCHAR2(10 CHAR) NOT NULL,
+  5      ship_code      CHAR(5 CHAR) NOT NULL
+  6  );
+
+Table CABIN created.
+
+SQL> 
+SQL> ALTER TABLE cabin
+  2      ADD CHECK ( cabin_class IN ( 'Balcony', 'Interior', 'Ocean View', 'Suite' ) );
+
+Table CABIN altered.
+
+SQL> 
+SQL> ALTER TABLE cabin ADD CONSTRAINT cabin_pk PRIMARY KEY ( cabin_number,
+  2                                                          ship_code );
+
+Table CABIN altered.
+
+SQL> 
+SQL> CREATE TABLE country (
+  2      country_code CHAR(2 CHAR) NOT NULL,
+  3      country_name VARCHAR2(60 CHAR) NOT NULL
+  4  );
+
+Table COUNTRY created.
+
+SQL> 
+SQL> ALTER TABLE country ADD CONSTRAINT country_pk PRIMARY KEY ( country_code );
+
+Table COUNTRY altered.
+
+SQL> 
+SQL> CREATE TABLE cruise (
+  2      cruise_id   NUMBER(4) NOT NULL,
+  3      cruise_name VARCHAR2(50 CHAR) NOT NULL,
+  4      cruise_desc VARCHAR2(80 CHAR) NOT NULL,
+  5      ship_code   CHAR(5 CHAR) NOT NULL
+  6  );
+
+Table CRUISE created.
+
+SQL> 
+SQL> ALTER TABLE cruise ADD CONSTRAINT cruise_pk PRIMARY KEY ( cruise_id );
+
+Table CRUISE altered.
+
+SQL> 
+SQL> CREATE TABLE cruise_port (
+  2      cruise_port_date_tiime DATE NOT NULL,
+  3      cruise_port_type       CHAR(1 CHAR) NOT NULL,
+  4      port_code              CHAR(5 CHAR) NOT NULL,
+  5      cruise_id              NUMBER(4) NOT NULL
+  6  );
+
+Table CRUISE_PORT created.
+
+SQL> 
+SQL> ALTER TABLE cruise_port
+  2      ADD CHECK ( cruise_port_type IN ( 'A', 'D' ) );
+
+Table CRUISE_PORT altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN cruise_port.port_code IS
+  2      'Port code';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE cruise_port ADD CONSTRAINT cruise_port_pk PRIMARY KEY ( port_code,
+  2                                                                      cruise_id );
+
+Table CRUISE_PORT altered.
+
+SQL> 
+SQL> CREATE TABLE language (
+  2      lang_code CHAR(2 CHAR) NOT NULL,
+  3      lang_name VARCHAR2(30 CHAR) NOT NULL
+  4  );
+
+Table LANGUAGE created.
+
+SQL> 
+SQL> ALTER TABLE language ADD CONSTRAINT language_pk PRIMARY KEY ( lang_code );
+
+Table LANGUAGE altered.
+
+SQL> 
+SQL> CREATE TABLE operator (
+  2      op_id       CHAR(5 CHAR) NOT NULL,
+  3      op_com_name VARCHAR2(60 CHAR) NOT NULL,
+  4      op_ceo_name VARCHAR2(50 CHAR) NOT NULL
+  5  );
+
+Table OPERATOR created.
+
+SQL> 
+SQL> ALTER TABLE operator ADD CONSTRAINT operator_pk PRIMARY KEY ( op_id );
+
+Table OPERATOR altered.
+
+SQL> 
+SQL> CREATE TABLE passenger (
+  2      pass_id          NUMBER(5) NOT NULL,
+  3      pass_fname       VARCHAR2(50 CHAR) NOT NULL,
+  4      pass_lname       VARCHAR2(50 CHAR) NOT NULL,
+  5      pass_gender      CHAR(1 CHAR) NOT NULL,
+  6      pass_dob         DATE NOT NULL,
+  7      pass_phonenum    CHAR(15 CHAR),
+  8      add_id           NUMBER(5) NOT NULL,
+  9      lang_code        CHAR(2 CHAR) NOT NULL,
+ 10      pass_guardian_id NUMBER(5)
+ 11  );
+
+Table PASSENGER created.
+
+SQL> 
+SQL> ALTER TABLE passenger
+  2      ADD CHECK ( pass_gender IN ( 'F', 'M', 'O' ) );
+
+Table PASSENGER altered.
+
+SQL> 
+SQL> ALTER TABLE passenger ADD CONSTRAINT passenger_pk PRIMARY KEY ( pass_id );
+
+Table PASSENGER altered.
+
+SQL> 
+SQL> CREATE TABLE passenger_cruise (
+  2      pass_cruise_boarding_date_time DATE NOT NULL,
+  3      cabin_number                   NUMBER(3) NOT NULL,
+  4      pass_id                        NUMBER(5) NOT NULL,
+  5      cruise_id                      NUMBER(4) NOT NULL,
+  6      ship_code                      CHAR(5 CHAR) NOT NULL
+  7  );
+
+Table PASSENGER_CRUISE created.
+
+SQL> 
+SQL> ALTER TABLE passenger_cruise ADD CONSTRAINT passenger_cruise_pk PRIMARY KEY ( pass_id,
+  2                                                                                cruise_id );
+
+Table PASSENGER_CRUISE altered.
+
+SQL> 
+SQL> CREATE TABLE port (
+  2      port_code       CHAR(5 CHAR) NOT NULL,
+  3      port_name       VARCHAR2(20 CHAR) NOT NULL,
+  4      port_population NUMBER(5) NOT NULL,
+  5      port_longtitude NUMBER(10, 7) NOT NULL,
+  6      port_latitude   NUMBER(10, 7) NOT NULL,
+  7      country_code    CHAR(2 CHAR) NOT NULL
+  8  );
+
+Table PORT created.
+
+SQL> 
+SQL> COMMENT ON COLUMN port.port_code IS
+  2      'Port code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN port.port_name IS
+  2      'Port name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN port.port_population IS
+  2      'Port population';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN port.port_longtitude IS
+  2      'Port longtitude';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN port.port_latitude IS
+  2      'Port latitude';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE port ADD CONSTRAINT port_pk PRIMARY KEY ( port_code );
+
+Table PORT altered.
+
+SQL> 
+SQL> CREATE TABLE port_temperature (
+  2      porttemp_month   VARCHAR2(4 CHAR) NOT NULL,
+  3      porttemp_avghigh NUMBER(2) NOT NULL,
+  4      porttemp_avglow  NUMBER(2) NOT NULL,
+  5      port_code        CHAR(5 CHAR) NOT NULL
+  6  );
+
+Table PORT_TEMPERATURE created.
+
+SQL> 
+SQL> ALTER TABLE port_temperature
+  2      ADD CHECK ( porttemp_month IN ( 'Apr', 'Aug', 'Dec', 'Feb', 'Jan',
+  3                                      'July', 'Jun', 'Mar', 'May', 'Nov',
+  4                                      'Oct', 'Sep' ) );
+
+Table PORT_TEMPERATURE altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN port_temperature.port_code IS
+  2      'Port code';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE port_temperature ADD CONSTRAINT port_temperature_pk PRIMARY KEY ( porttemp_month,
+  2                                                                                port_code );
+
+Table PORT_TEMPERATURE altered.
+
+SQL> 
+SQL> CREATE TABLE ship (
+  2      ship_code            CHAR(5 CHAR) NOT NULL,
+  3      ship_name            VARCHAR2(30 CHAR) NOT NULL,
+  4      ship_commission_date DATE NOT NULL,
+  5      ship_max_capacity    NUMBER(3) NOT NULL,
+  6      ship_tonnage         NUMBER(3) NOT NULL,
+  7      ship_country_name    CHAR(60) NOT NULL,
+  8      op_id                CHAR(5 CHAR) NOT NULL
+  9  );
+
+Table SHIP created.
+
+SQL> 
+SQL> ALTER TABLE ship ADD CONSTRAINT ship_pk PRIMARY KEY ( ship_code );
+
+Table SHIP altered.
+
+SQL> 
+SQL> CREATE TABLE tour (
+  2      tour_num        NUMBER(3) NOT NULL,
+  3      tour_name       VARCHAR2(20 CHAR) NOT NULL,
+  4      tour_desc       VARCHAR2(100 CHAR) NOT NULL,
+  5      tour_hrsreq     NUMBER(3, 2) NOT NULL,
+  6      tour_cost       NUMBER(3) NOT NULL,
+  7      tour_wheelchair VARCHAR2(3 CHAR) NOT NULL,
+  8      tour_starttime  DATE NOT NULL,
+  9      port_code       CHAR(5 CHAR) NOT NULL
+ 10  );
+
+Table TOUR created.
+
+SQL> 
+SQL> ALTER TABLE tour
+  2      ADD CHECK ( tour_wheelchair IN ( 'No', 'Yes' ) );
+
+Table TOUR altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour.tour_num IS
+  2      'Tour number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour.tour_name IS
+  2      'Tour name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour.port_code IS
+  2      'Port code';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE tour ADD CONSTRAINT tour_pk PRIMARY KEY ( tour_num,
+  2                                                        port_code );
+
+Table TOUR altered.
+
+SQL> 
+SQL> CREATE TABLE tour_availability_range (
+  2      tour_num              NUMBER(3) NOT NULL,
+  3      port_code             CHAR(5 CHAR) NOT NULL,
+  4      avail_range_desciptor VARCHAR2(10 CHAR) NOT NULL
+  5  );
+
+Table TOUR_AVAILABILITY_RANGE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour_availability_range.tour_num IS
+  2      'Tour number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour_availability_range.port_code IS
+  2      'Port code';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour_availability_range.avail_range_desciptor IS
+  2      'Range of availability in tour';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE tour_availability_range
+  2      ADD CONSTRAINT tour_availability_range_pk PRIMARY KEY ( tour_num,
+  3                                                              port_code,
+  4                                                              avail_range_desciptor );
+
+Table TOUR_AVAILABILITY_RANGE altered.
+
+SQL> 
+SQL> CREATE TABLE tour_instance (
+  2      tour_date DATE NOT NULL,
+  3      tour_num  NUMBER(3) NOT NULL,
+  4      port_code CHAR(5 CHAR) NOT NULL
+  5  );
+
+Table TOUR_INSTANCE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour_instance.tour_num IS
+  2      'Tour number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour_instance.port_code IS
+  2      'Port code';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE tour_instance
+  2      ADD CONSTRAINT tour_instance_pk PRIMARY KEY ( tour_date,
+  3                                                    tour_num,
+  4                                                    port_code );
+
+Table TOUR_INSTANCE altered.
+
+SQL> 
+SQL> CREATE TABLE tour_instance_passenger (
+  2      payment_received VARCHAR2(3 CHAR) NOT NULL,
+  3      tour_date        DATE NOT NULL,
+  4      tour_num         NUMBER(3) NOT NULL,
+  5      port_code        CHAR(5 CHAR) NOT NULL,
+  6      pass_id          NUMBER(5) NOT NULL
+  7  );
+
+Table TOUR_INSTANCE_PASSENGER created.
+
+SQL> 
+SQL> ALTER TABLE tour_instance_passenger
+  2      ADD CHECK ( payment_received IN ( 'No', 'Yes' ) );
+
+Table TOUR_INSTANCE_PASSENGER altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour_instance_passenger.tour_num IS
+  2      'Tour number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour_instance_passenger.port_code IS
+  2      'Port code';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE tour_instance_passenger
+  2      ADD CONSTRAINT tour_instance_passenger_pk PRIMARY KEY ( tour_date,
+  3                                                              tour_num,
+  4                                                              port_code,
+  5                                                              pass_id );
+
+Table TOUR_INSTANCE_PASSENGER altered.
+
+SQL> 
+SQL> CREATE TABLE tour_language (
+  2      lang_code CHAR(2 CHAR) NOT NULL,
+  3      tour_num  NUMBER(3) NOT NULL,
+  4      port_code CHAR(5 CHAR) NOT NULL
+  5  );
+
+Table TOUR_LANGUAGE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour_language.tour_num IS
+  2      'Tour number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN tour_language.port_code IS
+  2      'Port code';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE tour_language
+  2      ADD CONSTRAINT tour_language_pk PRIMARY KEY ( tour_num,
+  3                                                    port_code,
+  4                                                    lang_code );
+
+Table TOUR_LANGUAGE altered.
+
+SQL> 
+SQL> ALTER TABLE cabin
+  2      ADD CONSTRAINT cabin_ship_fk FOREIGN KEY ( ship_code )
+  3          REFERENCES ship ( ship_code );
+
+Table CABIN altered.
+
+SQL> 
+SQL> ALTER TABLE cruise_port
+  2      ADD CONSTRAINT cruise_port_cruise_fk FOREIGN KEY ( cruise_id )
+  3          REFERENCES cruise ( cruise_id );
+
+Table CRUISE_PORT altered.
+
+SQL> 
+SQL> ALTER TABLE cruise_port
+  2      ADD CONSTRAINT cruise_port_port_fk FOREIGN KEY ( port_code )
+  3          REFERENCES port ( port_code );
+
+Table CRUISE_PORT altered.
+
+SQL> 
+SQL> ALTER TABLE cruise
+  2      ADD CONSTRAINT cruise_ship_fk FOREIGN KEY ( ship_code )
+  3          REFERENCES ship ( ship_code );
+
+Table CRUISE altered.
+
+SQL> 
+SQL> ALTER TABLE passenger
+  2      ADD CONSTRAINT passenger_address_fk FOREIGN KEY ( add_id )
+  3          REFERENCES address ( add_id );
+
+Table PASSENGER altered.
+
+SQL> 
+SQL> ALTER TABLE passenger_cruise
+  2      ADD CONSTRAINT passenger_cruise_cabin_fk FOREIGN KEY ( cabin_number,
+  3                                                             ship_code )
+  4          REFERENCES cabin ( cabin_number,
+  5                             ship_code );
+
+Table PASSENGER_CRUISE altered.
+
+SQL> 
+SQL> ALTER TABLE passenger_cruise
+  2      ADD CONSTRAINT passenger_cruise_cruise_fk FOREIGN KEY ( cruise_id )
+  3          REFERENCES cruise ( cruise_id );
+
+Table PASSENGER_CRUISE altered.
+
+SQL> 
+SQL> ALTER TABLE passenger_cruise
+  2      ADD CONSTRAINT passenger_cruise_passenger_fk FOREIGN KEY ( pass_id )
+  3          REFERENCES passenger ( pass_id );
+
+Table PASSENGER_CRUISE altered.
+
+SQL> 
+SQL> ALTER TABLE passenger
+  2      ADD CONSTRAINT passenger_language_fk FOREIGN KEY ( lang_code )
+  3          REFERENCES language ( lang_code );
+
+Table PASSENGER altered.
+
+SQL> 
+SQL> ALTER TABLE passenger
+  2      ADD CONSTRAINT passenger_passenger_fkv2 FOREIGN KEY ( pass_guardian_id )
+  3          REFERENCES passenger ( pass_id );
+
+Table PASSENGER altered.
+
+SQL> 
+SQL> ALTER TABLE port
+  2      ADD CONSTRAINT port_country_fk FOREIGN KEY ( country_code )
+  3          REFERENCES country ( country_code );
+
+Table PORT altered.
+
+SQL> 
+SQL> ALTER TABLE port_temperature
+  2      ADD CONSTRAINT port_temperature_port_fk FOREIGN KEY ( port_code )
+  3          REFERENCES port ( port_code );
+
+Table PORT_TEMPERATURE altered.
+
+SQL> 
+SQL> ALTER TABLE ship
+  2      ADD CONSTRAINT ship_operator_fk FOREIGN KEY ( op_id )
+  3          REFERENCES operator ( op_id );
+
+Table SHIP altered.
+
+SQL> 
+SQL> /*  ERROR: FK name length exceeds maximum allowed length(30) */
+SQL> ALTER TABLE tour_availability_range
+  2      ADD CONSTRAINT tour_availability_range_availability_range_fk FOREIGN KEY ( avail_range_desciptor )
+  3          REFERENCES availability_range ( avail_range_desciptor );
+
+Table TOUR_AVAILABILITY_RANGE altered.
+
+SQL> 
+SQL> /*  ERROR: FK name length exceeds maximum allowed length(30) */
+SQL> ALTER TABLE tour_availability_range
+  2      ADD CONSTRAINT tour_availability_range_tour_fk FOREIGN KEY ( tour_num,
+  3                                                                   port_code )
+  4          REFERENCES tour ( tour_num,
+  5                            port_code );
+
+Table TOUR_AVAILABILITY_RANGE altered.
+
+SQL> 
+SQL> /*  ERROR: FK name length exceeds maximum allowed length(30) */
+SQL> ALTER TABLE tour_instance_passenger
+  2      ADD CONSTRAINT tour_instance_passenger_passenger_fk FOREIGN KEY ( pass_id )
+  3          REFERENCES passenger ( pass_id );
+
+Table TOUR_INSTANCE_PASSENGER altered.
+
+SQL> 
+SQL> /*  ERROR: FK name length exceeds maximum allowed length(30) */
+SQL> ALTER TABLE tour_instance_passenger
+  2      ADD CONSTRAINT tour_instance_passenger_tour_instance_fk FOREIGN KEY ( tour_date,
+  3                                                                            tour_num,
+  4                                                                            port_code )
+  5          REFERENCES tour_instance ( tour_date,
+  6                                     tour_num,
+  7                                     port_code );
+
+Table TOUR_INSTANCE_PASSENGER altered.
+
+SQL> 
+SQL> ALTER TABLE tour_instance
+  2      ADD CONSTRAINT tour_instance_tour_fk FOREIGN KEY ( tour_num,
+  3                                                         port_code )
+  4          REFERENCES tour ( tour_num,
+  5                            port_code );
+
+Table TOUR_INSTANCE altered.
+
+SQL> 
+SQL> ALTER TABLE tour_language
+  2      ADD CONSTRAINT tour_language_language_fk FOREIGN KEY ( lang_code )
+  3          REFERENCES language ( lang_code );
+
+Table TOUR_LANGUAGE altered.
+
+SQL> 
+SQL> ALTER TABLE tour_language
+  2      ADD CONSTRAINT tour_language_tour_fk FOREIGN KEY ( tour_num,
+  3                                                         port_code )
+  4          REFERENCES tour ( tour_num,
+  5                            port_code );
+
+Table TOUR_LANGUAGE altered.
+
+SQL> 
+SQL> ALTER TABLE tour
+  2      ADD CONSTRAINT tour_port_fk FOREIGN KEY ( port_code )
+  3          REFERENCES port ( port_code );
+
+Table TOUR altered.
+
+SQL> 
+SQL> SPOOL OFF

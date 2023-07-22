@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="375C2EC3-D0DD-5465-B544-14D42C78D4A8" name="TOUR_AVAILABILITY_RANGE">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>162D0FB6-B089-E232-9FD9-25FC72B2E59A</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tour_num" id="21D400EF-69E1-4141-4459-97658936AA60">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tour number]]></commentInRDBMS>
+<generatorID>C13F3601-6492-56F8-56BF-3E762DC7363F</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE46478E-DE4E-4ADD-CCC3-85C04029DF91" referredColumn="88E319C8-EAB5-7095-6217-56AF22497506"/>
+</associations>
+</Column>
+<Column name="port_code" id="95EA81BB-5AF9-AE08-3CC8-47B9E9D58800">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[Port code]]></commentInRDBMS>
+<generatorID>EBD34EC7-9E86-8437-4800-E2DABA9D6429</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FE46478E-DE4E-4ADD-CCC3-85C04029DF91" referredColumn="26BDB079-19DE-2CC2-D7E3-1C2A432A4FF7"/>
+</associations>
+</Column>
+<Column name="avail_range_desciptor" id="BBCC09EA-6D48-B6EC-A6F9-8D9F53C1BF13">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[Range of availability in tour]]></commentInRDBMS>
+<generatorID>5BB1662B-28B9-FFB2-130B-F12691745805</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D54DD18C-FB51-578D-F2E2-1AB90DEC270E" referredColumn="8117B1C9-FE51-4B1B-B652-C399326552EF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E2F713F0-3961-C173-BDF0-FA94C4D95485" name="TOUR_AVAILABILITY_RANGE_PK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>7187A8FC-D47A-4CFE-619E-F5A2754D8931</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="21D400EF-69E1-4141-4459-97658936AA60"/>
+<colUsage columnID="95EA81BB-5AF9-AE08-3CC8-47B9E9D58800"/>
+<colUsage columnID="BBCC09EA-6D48-B6EC-A6F9-8D9F53C1BF13"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1C621B3E-182D-16E0-397D-7FEE4B7C0FC6" name="TOUR_AVAILABILITY_RANGE_AVAILABILITY_RANGE_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>4ED5AF17-7066-DC66-28C6-DCACDE48D26B</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BBCC09EA-6D48-B6EC-A6F9-8D9F53C1BF13"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="88DC6482-16F3-7FAC-40F7-0AC8C339BFF7" name="TOUR_AVAILABILITY_RANGE_TOUR_FK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>760A0261-90DA-1D08-234D-149D9183982B</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="21D400EF-69E1-4141-4459-97658936AA60"/>
+<colUsage columnID="95EA81BB-5AF9-AE08-3CC8-47B9E9D58800"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C8304F2D-2136-CC35-14B5-F5A42D6195D6" name="CRUISE_PORT">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 05:51:20 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cruise_port_date_tiime" id="785EBFB5-D804-134D-EE81-F72B52F1EA59">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 07:13:54 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cruise_port_type" id="AF8215BF-64D9-F83A-166E-5209051F75DE">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 07:14:40 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="A" description="Arrival"/>
+<valueDef value="D" description="Departure"/>
+</listOfValues>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="port_code" id="34AD1103-641A-AA59-0CDC-BFDA24C42BDC">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:04:23 UTC</createdTime>
+<commentInRDBMS><![CDATA[Port code]]></commentInRDBMS>
+<generatorID>84713338-74AE-4249-47C9-AD920A23E571</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<referedAttribute>CF1B68DD-779E-3EEE-6532-2C554C0B979A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cruise_id" id="3FD05829-A1C8-89FA-12A0-6DD32B23BD06">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:08:21 UTC</createdTime>
+<generatorID>E75D66E7-F42A-29FF-2A0A-87AA8A923FA9</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<referedAttribute>6C99B2FD-A3F9-1BB1-77F0-C5D821EF0DA3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DC73411B-7B9A-2BFC-9B0F-614F918F7899" name="CRUISE_PORT PK">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:07:39 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>34AD1103-641A-AA59-0CDC-BFDA24C42BDC</attributeRef>
+<attributeRef>3FD05829-A1C8-89FA-12A0-6DD32B23BD06</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

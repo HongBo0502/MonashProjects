@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="561C97E4-AE2E-C877-C3E7-FC12EFE830B9" name="TOUR_LANGUAGE">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 07:10:18 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="lang_code" id="1419DEB0-36BF-5903-5298-1436FBB65EE0">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:49:16 UTC</createdTime>
+<generatorID>D1406573-158A-51C3-0B3A-0B2D43046770</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<referedAttribute>90E44F94-0D13-7404-596A-C69E36250E88</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tour_num" id="C2F150BD-5D1C-A5D5-EAE1-95CEAFBEB3AC">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:56:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[Tour number]]></commentInRDBMS>
+<generatorID>A7D78B51-A1B9-3F86-7796-EF9AD7B03B73</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<referedAttribute>85DF86CF-5207-A0C7-F4F7-6E8BDC79B8FC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="port_code" id="2212FCDE-E341-F56E-312C-F3AD4AEBF120">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:56:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[Port code]]></commentInRDBMS>
+<generatorID>A7D78B51-A1B9-3F86-7796-EF9AD7B03B73</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<referedAttribute>998DE78F-B441-3EED-EF11-34A02DFB857C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D80D6996-EEA7-7FB7-972D-A30C259C06D5" name="TOUR_LANGUAGE PK">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 10:56:34 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C2F150BD-5D1C-A5D5-EAE1-95CEAFBEB3AC</attributeRef>
+<attributeRef>2212FCDE-E341-F56E-312C-F3AD4AEBF120</attributeRef>
+<attributeRef>1419DEB0-36BF-5903-5298-1436FBB65EE0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

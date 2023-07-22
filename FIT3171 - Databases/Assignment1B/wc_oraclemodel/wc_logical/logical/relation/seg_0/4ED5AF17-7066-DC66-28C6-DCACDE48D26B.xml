@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="availabilityrange_touravailabilityrange" directorySegmentName="seg_0" id="4ED5AF17-7066-DC66-28C6-DCACDE48D26B">
+<createdBy>Hong Bo</createdBy>
+<createdTime>2022-04-27 11:16:02 UTC</createdTime>
+<ownerDesignName>wc_logical</ownerDesignName>
+<engineerTo>
+<item key="76EBFAE0-653C-31B7-5593-D77D8C5D2B88" value="true"/>
+</engineerTo>
+<sourcePk>8502A174-D0F5-7EB9-303E-0F6B75CCB5A4</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>included in</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BDEB56B8-C381-7131-E341-56D244BC1610</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>162D0FB6-B089-E232-9FD9-25FC72B2E59A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

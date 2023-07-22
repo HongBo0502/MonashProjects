@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AC73E07C-A53A-3078-BFE2-3D2C87641777" name="AVAILABILITY_RANGE">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>BDEB56B8-C381-7131-E341-56D244BC1610</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="avail_range_desciptor" id="8117B1C9-FE51-4B1B-B652-C399326552EF">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<commentInRDBMS><![CDATA[Range of availability in tour]]></commentInRDBMS>
+<generatorID>B0C3826D-E9F4-A7A8-FDBC-5E9C3511E46B</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<constraintName>chk_tourrange</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<listOfValues>
+<valueDef value="Daily" description=""/>
+<valueDef value="Fridays" description=""/>
+<valueDef value="Mondays" description=""/>
+<valueDef value="Saturdays" description=""/>
+<valueDef value="Sundays" description=""/>
+<valueDef value="Thursdays" description=""/>
+<valueDef value="Tuesdays" description=""/>
+<valueDef value="Wednesdays" description=""/>
+<valueDef value="Weekdays" description=""/>
+<valueDef value="Weekends" description=""/>
+</listOfValues>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8A02DF36-1684-14F0-C7B6-14CBDA6B3A70" name="AVAILABILITY_RANGE_PK">
+<createdBy>mehma</createdBy>
+<createdTime>2022-04-27 12:43:09 UTC</createdTime>
+<generatorID>8502A174-D0F5-7EB9-303E-0F6B75CCB5A4</generatorID>
+<ownerDesignName>wc_logical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8117B1C9-FE51-4B1B-B652-C399326552EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
