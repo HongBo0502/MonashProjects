@@ -1,0 +1,7 @@
+This program is programmed with a default proccess which will output the first 10 words from the sample.txt file and if the file doen't have more than 10 words the program will output the whole file.
+This program also could take in arguments which can change its source and append to the destination with specific number of words
+e.g1 ./fileutil <dir_1> -a <dir_2> -n num
+	this command will let the program to read the file from dir_1 with num of words and append to dir_2.
+The sourcefile must be in the first argument if it is exist and the '-a destfile' and '-n numwords' can be in any orders.
+e.g2 ./fileutil <dir_1> -a -n num <dir_2> 
+	these will also get the same results as e.g1.

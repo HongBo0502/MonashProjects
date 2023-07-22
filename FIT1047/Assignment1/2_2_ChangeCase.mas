@@ -1,0 +1,135 @@
+﻿loop, Jns subInputNames
+	  Load myName
+      add one
+      Store myName
+      Jump loop
+end,jns subPrintString
+	load myNamePrint
+    Add one
+    Store myNamePrint
+	Jump end
+case, jns subChangeCase
+	  load myNameChange
+	  add one
+      store myNameChange
+	  jump case
+finish,	Halt     
+     
+     
+subInputNames, Hex 0
+			   Input
+               store temp
+               Subt Dollar
+               Skipcond 400
+               Jump Fullstopcheck
+               load temp
+			   StoreI myName 
+               Jump end// go to the changing case loop
+Fullstopcheck, load temp
+			   subt fullstop
+               Skipcond 400
+			   jump StoreName
+			   jump nextname
+StoreName,	load temp
+			StoreI myName
+            JumpI subInputNames
+nextname, load temp
+		  StoreI myName //store fullstop in address
+		  Load myName
+		  add nextline
+		  store myName
+          jumpi subInputNames
+          
+subPrintString, Hex 0
+				LoadI myNamePrint //taking the memory inside the address
+                Store temp
+                subt Dollar
+				skipcond 400
+                jump PrintspacesName
+                jump case
+PrintspacesName, load temp
+				subt comma
+                Skipcond 400
+                jump printcheckline
+                jump printspace
+printspace, load space
+			store temp
+            jump PrintName
+printcheckline,Load temp
+			  subt fullstop
+				Skipcond 400
+                jump PrintName
+				jump printnewline
+printnewline,load newline
+			store temp
+			Jump PrintName
+                
+PrintName,      load temp
+				subt newline
+				Skipcond 400
+                jump print
+                load newline
+                Output
+                jump printnewname
+                
+print,	load temp		
+		Output
+        JumpI subPrintString
+printnewname,load temp
+		  	StoreI myNamePrint
+			load myNamePrint
+			add nextline
+			store myNamePrint
+			JumpI subPrintString
+subChangeCase,  hex 0
+				loadI myNameChange
+                Store temp
+                subt Dollar
+				skipcond 400
+                jump checkspace
+				jump finish
+checkspace,load temp
+			subt comma
+            skipcond 400
+            jump checknewline
+            load space
+			store temp
+            jump printcases
+checknewline,Load temp
+			 subt newline
+             skipcond 400
+             jump checkcasesSC
+			 jump printnewcases
+checkcasesSC, load temp
+			  subt diff //checking if the alphabet have the ASCII which is higer or lower to 91
+              Skipcond 800
+              jump casesCS
+              load temp
+              subt space / changing a alphabet to capital or become a small letter can be deduct or add by 32
+              store temp
+              jump printcases
+casesCS, load temp
+		 add space
+         store temp
+         jump printcases
+printcases, load temp 
+			output
+            jumpi subChangeCase
+printnewcases, load temp
+				output
+				load myNameChange
+				add nextline
+				store myNameChange
+				JumpI subChangeCase
+myName, HEX 300
+myNamePrint,Hex 300
+myNameChange,Hex 300
+Dollar, dec 36
+fullstop,dec 46
+comma,dec 44
+space,dec 32 
+one, dec 1
+temp, dec 0
+nextline, dec 4 
+newline, dec 10
+diff, dec 91

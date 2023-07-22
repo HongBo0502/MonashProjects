@@ -1,0 +1,91 @@
+﻿loop, Jns subInputNames
+	  Load myName
+      add one
+      Store myName
+      Jump loop
+end,jns subPrintString
+	load myNamePrint
+    Add one
+    Store myNamePrint
+	Jump end
+finish,	Halt     
+     
+     
+subInputNames, Hex 0
+			   Input
+               store temp
+               Subt Dollar
+               Skipcond 400
+               Jump Fullstopcheck
+               load temp
+			   StoreI myName 
+               Jump end
+Fullstopcheck, load temp
+			   subt fullstop//check for fullstop to store in another address
+               Skipcond 400
+			   jump StoreName
+			   jump nextname
+StoreName,	load temp
+			StoreI myName
+            JumpI subInputNames
+nextname, load temp
+		  StoreI myName //store fullstop in address
+		  Load myName
+		  add nextline//changing the address to the next line to store
+		  store myName
+          jumpi subInputNames
+          
+subPrintString, Hex 0
+				LoadI myNamePrint
+                Store temp
+                subt Dollar
+				skipcond 400
+                jump PrintspacesName
+                jump finish
+PrintspacesName, load temp
+				subt comma 
+                Skipcond 400 /print space for the present of comma
+                jump printcheckline
+                jump printspace
+printspace, load space 
+			store temp
+            jump PrintName
+printcheckline,Load temp
+			  subt fullstop
+				Skipcond 400
+                jump PrintName
+				jump printnewline
+printnewline,load newline
+			store temp
+			Jump PrintName
+                
+PrintName,      load temp
+				subt newline
+				Skipcond 400
+                jump print
+                load newline
+                Output
+                jump printnewname
+                
+print,	load temp		
+		Output
+        JumpI subPrintString
+printnewname,load temp
+		  	StoreI myNamePrint
+			load myNamePrint
+			add nextline
+			store myNamePrint
+			JumpI subPrintString
+
+
+
+myName, HEX 300
+myNamePrint,Hex 300
+Dollar, dec 36
+fullstop,dec 46
+comma,dec 44
+space,dec 32
+one, dec 1
+temp, dec 0
+nextline, dec 4 // assume that everyline will be inserted 12 letter included comma and fullstop
+newline, dec 10

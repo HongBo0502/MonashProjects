@@ -1,0 +1,152 @@
+﻿loop, Jns subInputNames
+	  Load myName
+      add one
+      Store myName
+      Jump loop
+end,jns subPrintString
+	load myNamePrint
+    Add one
+    Store myNamePrint
+	Jump end
+
+sub, jns subSubstitution
+     load myNameSUB
+	 add one
+     store myNameSUB
+     load subSUB
+	 add one
+     Store subSUB
+	 jump sub
+finish,	Halt     
+     
+     
+subInputNames, Hex 0
+			   Input
+               store temp
+               Subt Dollar
+               Skipcond 400
+               Jump Fullstopcheck
+               load temp
+			   StoreI myName 
+               Jump end
+Fullstopcheck, load temp
+			   subt fullstop
+               Skipcond 400
+			   jump StoreName
+			   jump nextname
+StoreName,	load temp
+			StoreI myName
+            JumpI subInputNames
+nextname, load temp
+		  StoreI myName //store fullstop in address
+		  Load myName
+		  add nextline
+		  store myName
+          jumpi subInputNames
+          
+subPrintString, Hex 0
+				LoadI myNamePrint
+                Store temp
+                subt Dollar
+				skipcond 400
+                jump PrintspacesName
+                jump sub
+PrintspacesName, load temp
+				subt comma
+                Skipcond 400
+                jump printcheckline
+                jump printspace
+printspace, load space
+			store temp
+            jump PrintName
+printcheckline,Load temp
+			  subt fullstop
+				Skipcond 400
+                jump PrintName
+				jump printnewline
+printnewline,load newline
+			store temp
+			Jump PrintName
+                
+PrintName,      load temp
+				subt newline
+				Skipcond 400
+                jump print
+                load newline
+                Output
+                jump printnewname
+                
+print,	load temp		
+		Output
+        JumpI subPrintString
+printnewname,load temp
+		  	StoreI myNamePrint
+			load myNamePrint
+			add nextline
+			store myNamePrint
+			JumpI subPrintString
+subSubstitution, Hex 0
+				loadI myNameSUB
+				store temp
+                load temp
+				subt Dollar
+				skipcond 400
+                jump remainspace
+                jump finish
+remainspace,load temp
+			subt comma
+            Skipcond 400
+            jump remainnewline
+            load space
+			store temp
+            load space
+            storeI subSUB
+            jump printsub
+remainnewline,load temp 
+	   	   	  subt newline
+              Skipcond 400
+              jump SMALL
+              jump gonewline
+xyz,load temp
+	subt XYZxyz
+	storeI subSUB
+    jump printsub
+SMALL,load temp
+	  subt w /we can subt the number of ASCII w to justify xyz
+      Skipcond 800
+      jump addthree
+      jump xyz
+addthree,load temp
+      	 add three
+      	 storeI subSUB
+	  	 jump printsub
+gonewline, load temp
+           output
+           load myNameSUB
+           add nextline
+		   store myNameSUB
+           load subSUB
+           add nextline
+		   storeI subSUB
+           JumpI subSubstitution
+
+printsub,loadI subSUB
+		 Output
+      	 JumpI subSubstitution
+
+
+myName, HEX 300
+myNamePrint,Hex 300
+myNameSUB,Hex 300
+subSUB, HEX 400
+Dollar, dec 36
+fullstop,dec 46
+comma,dec 44
+space,dec 32
+one, dec 1
+temp, dec 0
+nextline, dec 4 // assume that the input is 12 ths will make address from 300 to 310.
+newline, dec 10
+three, dec 3
+w,dec 119
+XYZxyz,dec 23
