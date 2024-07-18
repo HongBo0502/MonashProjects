@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --job-name=A1_Parallel2__job
+#SBATCH --time=00:10:00
+#SBATCH --mem=16G
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --output=A1_Parallel2.%j.out
+#SBATCH --partition=defq
+
+if [ ! -f A1_Parallel2 ]
+then
+ gcc A1_parallel2.c -o A1_Parallel2 -fopenmp
+else
+ if [ A1_parallel2.c -nt A1_Parallel2 ]
+ then
+  gcc A1_parallel2.c -o A1_Parallel2 -fopenmp
+ fi
+fi
+
+./A1_Parallel2
+
+exit 0

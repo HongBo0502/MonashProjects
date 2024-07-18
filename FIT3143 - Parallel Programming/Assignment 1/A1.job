@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH --jab-name=A1_job
+#SBATCH --time=00:10:00
+#SBATCH --mem=16G
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --output=A1.%j.out
+#SBATCH --partition=defq
+
+if [ ! -f A1]
+then
+ gcc A1.c -o A1
+else
+ if [A1.c -nt A1]
+ then
+  gcc A1.c -o A1
+fi
+fi
+
+
+./A1
+
+exit 0

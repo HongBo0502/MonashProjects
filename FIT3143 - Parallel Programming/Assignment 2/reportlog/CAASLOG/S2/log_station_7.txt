@@ -1,0 +1,124 @@
+
+Station 7 iteration 0
+Time: 1
+Port 0:0
+Port 1:0
+Port 2:1
+Station 7 has 2 available ports
+
+Station 7 iteration 1
+Time: 2
+Port 0:1
+Port 1:1
+Port 2:1
+Station 7 has 0 available ports
+Station 7 is checking neighbor 4
+Station 7 is checking neighbor 6
+Station 7 is checking neighbor 8
+From Station 4 has 2 available ports
+Station 7 - Time spent for checking neighbor: 0.000173
+Station 7 neighbours has available ports
+
+Station 7 iteration 2
+Time: 3
+Port 0:1
+Port 1:0
+Port 2:0
+Station 7 has 2 available ports
+
+Station 7 iteration 3
+Time: 4
+Port 0:0
+Port 1:0
+Port 2:0
+Station 7 has 3 available ports
+
+Station 7 iteration 4
+Time: 5
+Port 0:0
+Port 1:1
+Port 2:1
+Station 7 has 1 available ports
+Station 7 is checking neighbor 4
+Station 7 is checking neighbor 6
+Station 7 is checking neighbor 8
+From Station 4 has 3 available ports
+From Station 6 has 2 available ports
+Station 7 - Time spent for checking neighbor: 0.000290
+Station 7 neighbours has available ports
+
+Station 7 iteration 5
+Time: 6
+Port 0:1
+Port 1:1
+Port 2:1
+Station 7 has 0 available ports
+Station 7 is checking neighbor 4
+Station 7 is checking neighbor 6
+Station 7 is checking neighbor 8
+From Station 4 has 2 available ports
+Station 7 - Time spent for checking neighbor: 0.000107
+Station 7 neighbours has available ports
+
+Station 7 iteration 6
+Time: 7
+Port 0:1
+Port 1:0
+Port 2:0
+Station 7 has 2 available ports
+
+Station 7 iteration 7
+Time: 8
+Port 0:0
+Port 1:0
+Port 2:1
+Station 7 has 2 available ports
+
+Station 7 iteration 8
+Time: 9
+Port 0:1
+Port 1:0
+Port 2:0
+Station 7 has 2 available ports
+
+Station 7 iteration 9
+Time: 10
+Port 0:0
+Port 1:1
+Port 2:1
+Station 7 has 1 available ports
+Station 7 is checking neighbor 4
+Station 7 is checking neighbor 6
+Station 7 is checking neighbor 8
+From Station 4 has 2 available ports
+From Station 6 has 2 available ports
+Station 7 - Time spent for checking neighbor: 0.000387
+Station 7 neighbours has available ports
+
+Station 7 iteration 10
+Time: 11
+Port 0:1
+Port 1:0
+Port 2:1
+Station 7 has 1 available ports
+Station 7 is checking neighbor 4
+Station 7 is checking neighbor 6
+Station 7 is checking neighbor 8
+From Station 4 has 2 available ports
+From Station 8 has 2 available ports
+Station 7 - Time spent for checking neighbor: 0.000176
+Station 7 neighbours has available ports
+
+Station 7 iteration 11
+Time: 12
+Port 0:1
+Port 1:0
+Port 2:1
+Station 7 has 1 available ports
+Station 7 is checking neighbor 4
+Station 7 is checking neighbor 6
+Station 7 is checking neighbor 8
+From Station 6 has 2 available ports
+From Station 8 has 2 available ports
+Station 7 - Time spent for checking neighbor: 0.000110
+Station 7 neighbours has available ports

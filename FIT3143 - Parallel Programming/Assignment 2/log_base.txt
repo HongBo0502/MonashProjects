@@ -1,0 +1,200 @@
+_____________________________________________________
+Report from station 0 at time 2
+Neighbor 0: -2
+Neighbor 1: 2
+Neighbor 2: -2
+Neighbor 3: 1
+station_report_state[0]: 1
+station_report_state[1]: 0
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 0
+Station 0 is checking for station 2
+Station 0 is checking for station 1
+Report from station 1 --- Neighbor rank: 3 has 2 available ports
+Report from station 2 --- Neighbor rank: 4 has 3 available ports
+Report from station 2 --- Neighbor rank: 3 has 2 available ports
+_____________________________________________________
+Report from station 5 at time 6
+Neighbor 0: 3
+Neighbor 1: -2
+Neighbor 2: 4
+Neighbor 3: -2
+station_report_state[0]: 0
+station_report_state[1]: 0
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 1
+Station 5 is checking for station 3
+Station 5 is checking for station 4
+Report from station 3 --- Neighbor rank: 1 has 2 available ports
+Report from station 3 --- Neighbor rank: 2 has 1 available ports
+Report from station 4 --- Neighbor rank: 2 has 1 available ports
+_____________________________________________________
+Report from station 4 at time 6
+Neighbor 0: 2
+Neighbor 1: -2
+Neighbor 2: -2
+Neighbor 3: 5
+station_report_state[0]: 0
+station_report_state[1]: 0
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 1
+station_report_state[5]: 1
+Station 4 is checking for station 2
+Station 5 has reported 
+Report from station 2 --- Neighbor rank: 0 has 1 available ports
+Report from station 2 --- Neighbor rank: 3 has 1 available ports
+_____________________________________________________
+Report from station 2 at time 6
+Neighbor 0: 0
+Neighbor 1: 4
+Neighbor 2: -2
+Neighbor 3: 3
+station_report_state[0]: 0
+station_report_state[1]: 0
+station_report_state[2]: 1
+station_report_state[3]: 0
+station_report_state[4]: 1
+station_report_state[5]: 1
+Station 2 is checking for station 0
+Station 4 has reported 
+Station 2 is checking for station 3
+Report from station 0 --- Neighbor rank: 1 has 2 available ports
+Report from station 3 --- Neighbor rank: 1 has 2 available ports
+Report from station 3 --- Neighbor rank: 5 has 1 available ports
+_____________________________________________________
+Report from station 1 at time 7
+Neighbor 0: -2
+Neighbor 1: 3
+Neighbor 2: 0
+Neighbor 3: -2
+station_report_state[0]: 0
+station_report_state[1]: 1
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 0
+Station 1 is checking for station 3
+Station 1 is checking for station 0
+Report from station 0 --- Neighbor rank: 2 has 1 available ports
+Report from station 3 --- Neighbor rank: 5 has 2 available ports
+Report from station 3 --- Neighbor rank: 2 has 1 available ports
+_____________________________________________________
+Report from station 0 at time 7
+Neighbor 0: -2
+Neighbor 1: 2
+Neighbor 2: -2
+Neighbor 3: 1
+station_report_state[0]: 1
+station_report_state[1]: 1
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 0
+Station 0 is checking for station 2
+Station 1 has reported 
+Report from station 2 --- Neighbor rank: 4 has 2 available ports
+Report from station 2 --- Neighbor rank: 3 has 1 available ports
+_____________________________________________________
+Report from station 5 at time 10
+Neighbor 0: 3
+Neighbor 1: -2
+Neighbor 2: 4
+Neighbor 3: -2
+station_report_state[0]: 0
+station_report_state[1]: 0
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 1
+Station 5 is checking for station 3
+Station 5 is checking for station 4
+Report from station 3 --- Neighbor rank: 1 has 2 available ports
+Report from station 3 --- Neighbor rank: 2 has 1 available ports
+Report from station 4 --- Neighbor rank: 2 has 1 available ports
+_____________________________________________________
+Report from station 4 at time 10
+Neighbor 0: 2
+Neighbor 1: -2
+Neighbor 2: -2
+Neighbor 3: 5
+station_report_state[0]: 0
+station_report_state[1]: 0
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 1
+station_report_state[5]: 1
+Station 4 is checking for station 2
+Station 5 has reported 
+Report from station 2 --- Neighbor rank: 0 has 2 available ports
+Report from station 2 --- Neighbor rank: 3 has 1 available ports
+_____________________________________________________
+Report from station 1 at time 11
+Neighbor 0: -2
+Neighbor 1: 3
+Neighbor 2: 0
+Neighbor 3: -2
+station_report_state[0]: 0
+station_report_state[1]: 1
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 0
+Station 1 is checking for station 3
+Station 1 is checking for station 0
+Report from station 3 --- Neighbor rank: 5 has 2 available ports
+_____________________________________________________
+Report from station 2 at time 11
+Neighbor 0: 0
+Neighbor 1: 4
+Neighbor 2: -2
+Neighbor 3: 3
+station_report_state[0]: 0
+station_report_state[1]: 1
+station_report_state[2]: 1
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 0
+Station 2 is checking for station 0
+Station 2 is checking for station 4
+Station 2 is checking for station 3
+Report from station 0 --- Neighbor rank: 1 has 1 available ports
+Report from station 3 --- Neighbor rank: 1 has 1 available ports
+Report from station 3 --- Neighbor rank: 5 has 2 available ports
+Report from station 4 --- Neighbor rank: 5 has 2 available ports
+_____________________________________________________
+Report from station 0 at time 11
+Neighbor 0: -2
+Neighbor 1: 2
+Neighbor 2: -2
+Neighbor 3: 1
+station_report_state[0]: 1
+station_report_state[1]: 1
+station_report_state[2]: 1
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 0
+Station 2 has reported 
+Station 1 has reported 
+No available ports
+_____________________________________________________
+Report from station 0 at time 12
+Neighbor 0: -2
+Neighbor 1: 2
+Neighbor 2: -2
+Neighbor 3: 1
+station_report_state[0]: 1
+station_report_state[1]: 0
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 0
+Station 0 is checking for station 2
+Station 0 is checking for station 1
+Report from station 1 --- Neighbor rank: 3 has 2 available ports
+Report from station 2 --- Neighbor rank: 4 has 3 available ports
+Report from station 2 --- Neighbor rank: 3 has 2 available ports

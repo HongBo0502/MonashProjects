@@ -1,0 +1,134 @@
+
+Station 0 iteration 0
+Time: 1
+Port 0:0
+Port 1:0
+Port 2:1
+Station 0 has 2 available ports
+
+Station 0 iteration 1
+Time: 2
+Port 0:1
+Port 1:0
+Port 2:1
+Station 0 has 1 available ports
+Station 0 is checking neighbor 2
+Station 0 is checking neighbor 1
+Station 0 - Time spent for checking neighbor: 0.000766
+Iter 1 - Station 0 neighbours has no available ports
+Sending my rank 0 iter 1 to base station
+Station 0 received from base station
+Station 3 has 2 available ports
+Station 4 has 3 available ports
+Station 0 - Time spent for checking lv2 neighbor: 0.004700
+
+Station 0 iteration 2
+Time: 3
+Port 0:1
+Port 1:1
+Port 2:0
+Station 0 has 1 available ports
+Station 0 is checking neighbor 2
+Station 0 is checking neighbor 1
+From Station 2 has 3 available ports
+From Station 1 has 2 available ports
+Station 0 - Time spent for checking neighbor: 0.001058
+Station 0 neighbours has available ports
+
+Station 0 iteration 3
+Time: 4
+Port 0:0
+Port 1:0
+Port 2:0
+Station 0 has 3 available ports
+
+Station 0 iteration 4
+Time: 5
+Port 0:0
+Port 1:1
+Port 2:0
+Station 0 has 2 available ports
+
+Station 0 iteration 5
+Time: 6
+Port 0:1
+Port 1:0
+Port 2:1
+Station 0 has 1 available ports
+Station 0 is checking neighbor 2
+Station 0 is checking neighbor 1
+From Station 1 has 2 available ports
+Station 0 - Time spent for checking neighbor: 0.000727
+Station 0 neighbours has available ports
+
+Station 0 iteration 6
+Time: 7
+Port 0:1
+Port 1:0
+Port 2:1
+Station 0 has 1 available ports
+Station 0 is checking neighbor 2
+Station 0 is checking neighbor 1
+Station 0 - Time spent for checking neighbor: 0.000767
+Iter 6 - Station 0 neighbours has no available ports
+Sending my rank 0 iter 6 to base station
+Station 0 received from base station
+Station 4 has 2 available ports
+Station 0 - Time spent for checking lv2 neighbor: 0.004668
+
+Station 0 iteration 7
+Time: 8
+Port 0:1
+Port 1:1
+Port 2:0
+Station 0 has 1 available ports
+Station 0 is checking neighbor 2
+Station 0 is checking neighbor 1
+From Station 2 has 2 available ports
+Station 0 - Time spent for checking neighbor: 0.000621
+Station 0 neighbours has available ports
+
+Station 0 iteration 8
+Time: 9
+Port 0:0
+Port 1:1
+Port 2:0
+Station 0 has 2 available ports
+
+Station 0 iteration 9
+Time: 10
+Port 0:0
+Port 1:0
+Port 2:1
+Station 0 has 2 available ports
+
+Station 0 iteration 10
+Time: 11
+Port 0:1
+Port 1:0
+Port 2:1
+Station 0 has 1 available ports
+Station 0 is checking neighbor 2
+Station 0 is checking neighbor 1
+Station 0 - Time spent for checking neighbor: 0.000682
+Iter 10 - Station 0 neighbours has no available ports
+Sending my rank 0 iter 10 to base station
+Station 0 received from base station
+Station 0 has no available ports
+Station 0 - Time spent for checking lv2 neighbor: 0.009059
+
+Station 0 iteration 11
+Time: 12
+Port 0:1
+Port 1:1
+Port 2:1
+Station 0 has 0 available ports
+Station 0 is checking neighbor 2
+Station 0 is checking neighbor 1
+Station 0 - Time spent for checking neighbor: 0.000552
+Iter 11 - Station 0 neighbours has no available ports
+Sending my rank 0 iter 11 to base station
+Station 0 received from base station
+Station 3 has 2 available ports
+Station 4 has 3 available ports
+Station 0 - Time spent for checking lv2 neighbor: 0.004828

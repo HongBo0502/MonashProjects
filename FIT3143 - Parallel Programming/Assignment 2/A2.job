@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --job-name=A2_S1_job
+#SBATCH --time=00:10:00
+#SBATCH --mem=16G
+#SBATCH --nodes=2
+#SBATCH --ntasks=7
+#SBATCH --cpus-per-task=3
+#SBATCH --ntasks-per-node=4
+#SBATCH --output=A2_S1.%j.out
+#SBATCH --partition=defq
+
+if [ ! -f a2_s1 ]
+then
+ mpicc a2.c -o a2_s1 -lpthread -lm
+else
+ if [ a2.c -nt a2_s1 ]
+ then
+  mpicc a2.c -o a2_s1 -lpthread -lm
+ fi
+fi
+
+srun ./a2_s1 2 3
+
+exit 0

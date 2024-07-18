@@ -1,0 +1,110 @@
+
+Station 6 iteration 0
+Time: 1
+Port 0:1
+Port 1:0
+Port 2:0
+Station 6 has 2 available ports
+
+Station 6 iteration 1
+Time: 2
+Port 0:0
+Port 1:1
+Port 2:1
+Station 6 has 1 available ports
+Station 6 is checking neighbor 3
+Station 6 is checking neighbor 7
+From Station 3 has 2 available ports
+Station 6 - Time spent for checking neighbor: 0.000322
+Station 6 neighbours has available ports
+
+Station 6 iteration 2
+Time: 3
+Port 0:1
+Port 1:1
+Port 2:0
+Station 6 has 1 available ports
+Station 6 is checking neighbor 3
+Station 6 is checking neighbor 7
+From Station 3 has 2 available ports
+From Station 7 has 2 available ports
+Station 6 - Time spent for checking neighbor: 0.000353
+Station 6 neighbours has available ports
+
+Station 6 iteration 3
+Time: 4
+Port 0:0
+Port 1:0
+Port 2:0
+Station 6 has 3 available ports
+
+Station 6 iteration 4
+Time: 5
+Port 0:0
+Port 1:0
+Port 2:1
+Station 6 has 2 available ports
+
+Station 6 iteration 5
+Time: 6
+Port 0:1
+Port 1:1
+Port 2:1
+Station 6 has 0 available ports
+Station 6 is checking neighbor 3
+Station 6 is checking neighbor 7
+From Station 3 has 3 available ports
+Station 6 - Time spent for checking neighbor: 0.000148
+Station 6 neighbours has available ports
+
+Station 6 iteration 6
+Time: 7
+Port 0:1
+Port 1:1
+Port 2:0
+Station 6 has 1 available ports
+Station 6 is checking neighbor 3
+Station 6 is checking neighbor 7
+From Station 7 has 2 available ports
+Station 6 - Time spent for checking neighbor: 0.000255
+Station 6 neighbours has available ports
+
+Station 6 iteration 7
+Time: 8
+Port 0:0
+Port 1:0
+Port 2:0
+Station 6 has 3 available ports
+
+Station 6 iteration 8
+Time: 9
+Port 0:0
+Port 1:1
+Port 2:0
+Station 6 has 2 available ports
+
+Station 6 iteration 9
+Time: 10
+Port 0:0
+Port 1:0
+Port 2:1
+Station 6 has 2 available ports
+
+Station 6 iteration 10
+Time: 11
+Port 0:1
+Port 1:1
+Port 2:0
+Station 6 has 1 available ports
+Station 6 is checking neighbor 3
+Station 6 is checking neighbor 7
+From Station 3 has 2 available ports
+Station 6 - Time spent for checking neighbor: 0.000237
+Station 6 neighbours has available ports
+
+Station 6 iteration 11
+Time: 12
+Port 0:0
+Port 1:1
+Port 2:0
+Station 6 has 2 available ports

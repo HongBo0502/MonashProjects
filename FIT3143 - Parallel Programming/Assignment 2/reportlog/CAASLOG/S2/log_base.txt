@@ -1,0 +1,62 @@
+_____________________________________________________
+Report from station 0 at time 1
+Neighbor 0: -2
+Neighbor 1: 3
+Neighbor 2: -2
+Neighbor 3: 1
+station_report_state[0]: 1
+station_report_state[1]: 0
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 0
+station_report_state[6]: 0
+station_report_state[7]: 0
+station_report_state[8]: 0
+Station 0 is checking for station 3
+Station 0 is checking for station 1
+Report from station 1 --- Neighbor rank: 4 has 1 available ports
+Report from station 3 --- Neighbor rank: 6 has 2 available ports
+Report from station 3 --- Neighbor rank: 4 has 1 available ports
+_____________________________________________________
+Report from station 1 at time 1
+Neighbor 0: -2
+Neighbor 1: 4
+Neighbor 2: 0
+Neighbor 3: 2
+station_report_state[0]: 1
+station_report_state[1]: 1
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 0
+station_report_state[6]: 0
+station_report_state[7]: 0
+station_report_state[8]: 0
+Station 1 is checking for station 4
+Station 0 has reported 
+Station 1 is checking for station 2
+Report from station 2 --- Neighbor rank: 5 has 2 available ports
+Report from station 4 --- Neighbor rank: 7 has 2 available ports
+Report from station 4 --- Neighbor rank: 3 has 1 available ports
+Report from station 4 --- Neighbor rank: 5 has 2 available ports
+_____________________________________________________
+Report from station 8 at time 6
+Neighbor 0: 5
+Neighbor 1: -2
+Neighbor 2: 7
+Neighbor 3: -2
+station_report_state[0]: 0
+station_report_state[1]: 0
+station_report_state[2]: 0
+station_report_state[3]: 0
+station_report_state[4]: 0
+station_report_state[5]: 0
+station_report_state[6]: 0
+station_report_state[7]: 0
+station_report_state[8]: 1
+Station 8 is checking for station 5
+Station 8 is checking for station 7
+Report from station 5 --- Neighbor rank: 2 has 3 available ports
+Report from station 5 --- Neighbor rank: 4 has 2 available ports
+Report from station 7 --- Neighbor rank: 4 has 2 available ports

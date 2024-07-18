@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --job-name=A1_Serial_job
+#SBATCH --time=00:10:00
+#SBATCH --mem=16G
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=4
+#SBATCH --output=A1_Serial.%j.out
+#SBATCH --partition=defq
+
+if [ ! -f A1_Serial ]
+then
+ gcc A1.c -o A1_Serial
+else
+ if [ A1.c -nt A1_Serial ]
+ then
+  gcc A1.c -o A1_Serial
+ fi
+fi
+
+./A1_Serial
+
+exit 0
